@@ -1,0 +1,124 @@
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  color: #fff;
+  padding: 40px;
+}
+
+.slider-content {
+  width: 40%;
+}
+.slider-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.slider-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.slider-content ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.slider-content ul li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+.view-btn {
+  background: #fbbc05;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Right side slider */
+.slider {
+  position: relative;
+  width: 55%;
+  height: 70vh;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.slider img.active {
+  display: block;
+  animation: fade 1s ease-in-out;
+}
+
+/* Fade effect */
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Navigation Arrows */
+.arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.arrow-btn:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.arrow-btn.left {
+  left: 20px;
+}
+.arrow-btn.right {
+  right: 20px;
+}
+
+/* Dots */
+.dots {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.dots span {
+  height: 12px;
+  width: 12px;
+  margin: 0 6px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.dots span.active {
+  opacity: 1;
+  background: #fbbc05;
+}

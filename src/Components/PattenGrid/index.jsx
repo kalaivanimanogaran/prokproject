@@ -2,7 +2,7 @@ import React from "react"
 import "./style.css"
 
 function PatternGrid() {
-  const shapes = Array.from({ length: 21 }) // 20 blocks (adjust as needed)
+  const shapes = Array.from({ length: 21 })
 
   return (
     <div className="pattern">

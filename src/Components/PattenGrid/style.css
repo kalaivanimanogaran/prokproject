@@ -1,22 +1,26 @@
-/* ===== BACKGROUND GRID ===== */
+
 .pattern {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 2;
+  grid-template-columns: repeat(7, 150px); 
+  gap: 26px;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  background: #1e1e1e;
+  justify-content: center; 
+  align-content: center;   
 }
 
-.pattern .shape {
-  width: 100%;
+
+.shape {
+  width: 150px;
   height: 150px;
-  background: #fbbc05;
-  clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 50%, 50% 100%, 0 100%);
+  background: #fbbc05;       
+  border-top-left-radius: 100%;  
   transition: transform 0.6s ease-in-out;
 }
 
-/* Hover animation */
-.pattern .shape:hover {
+
+.shape:hover {
   transform: rotate(90deg);
+  cursor: pointer;
 }
